@@ -13,5 +13,5 @@ Exercício com intuito de expor os alunos do curso PROPROFISSÃO ao ambeinte de 
      
   5) Resolva em inputs cada forma:
      <p align="center">
-      <img src="exemplo/Exer-5.PNG" alt="fórmulas de calculo para área de quadrado, retângulo, etc">
+      <img src="exemplo/Exer-5.png" alt="fórmulas de calculo para área de quadrado, retângulo, etc">
      </p>
