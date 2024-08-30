@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Lógica 4 - Área Retângulo</title>
+    <style>
+        section.main-content {
+          width: 50vw;
+          display:flex;
+          grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+          gap: 20px;
+          margin: 0 auto;
+        }
+        .center {
+          text-align: center;
+        }
+        section div input {
+          width: 100%;
+        }
+        section div label {
+          text-align: left;
+        }
+        section input[type="submit"], #mensage {
+          margin: 10px 0 0 5px;
+        }
+        #mensage {
+          padding: 10px;
+          background-color: rgb(221, 90, 90);
+          color: rgb(102, 0, 0);
+          border-radius: 5px;
+        }
+    </style>
+    <script>
+        function Calcular() {
+          var mensage = document.querySelector("#mensage");
+          mensage.textContent = "";
+          mensage.style.display = "none";
+
+          var base = parseFloat(document.getElementById("base").value);
+          var altura = parseFloat(document.getElementById("altura").value);
+
+          if(isNaN(base) || base <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de base inválido"; }
+          if(isNaN(altura) || altura <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de altura inválido"; }
+
+          var area = base * altura;
+          var result = document.querySelector("#result");
+          result.textContent = "Área do objeto pe igual a " + area;
+        }
+    </script>
+  </head>
+  <body>
+    <main>
+        <h2 class="center">Calcule a área de Retângulo</h2>
+        <section class="main-content">
+            <img src="exemplo/retangulo-exemplo.png" alt="imagem de um retangulo tridmensionalmente">
+            <div>
+              <p id="mensage" style="display: none;"></p>
+              <label>Base:</label>
+              <input type="text" id="base" name="base">
+              <label>Altura:</label>
+              <input type="text" id="altura" name="altura">
+              <input type="submit" onclick="Calcular()" value="Calcular"> 
+              <p id="result"></p>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
