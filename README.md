@@ -1,5 +1,5 @@
 <h1>Estudo Hora De Codar</h1>
-Exercício com intuito de expor os alunos do curso PROPROFISSÃO ao ambeinte de resolução de problemas através de casos reais com o JavaScript. 
+Exercício com intuito de expor os alunos do curso PROPROFISSÃO ao ambiente de resolução de problemas através de casos reais com o JavaScript. 
 
 ## Ecercícios Propostos
 
