@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <title>Lógica 4 - Área Losango</title>
+    <title>Lógica 4 - Área Trapézio</title>
     <style>
         section.main-content {
           width: 50vw;
@@ -37,13 +37,15 @@
           mensage.textContent = "";
           mensage.style.display = "none";
 
-          var maior = parseFloat(document.getElementById("di-maior").value);
-          var menor = parseFloat(document.getElementById("di-menor").value);
+          var maior = parseFloat(document.getElementById("base-maior").value);
+          var menor = parseFloat(document.getElementById("base-menor").value);
+          var altura = parseFloat(document.getElementById("altura").value);
 
-          if(isNaN(maior) || maior <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor da diagonal maior inválido"; }
-          if(isNaN(menor) || menor <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor da diagonal menor inválido"; }
+          if(isNaN(maior) || maior <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de base maior inválido"; }
+          if(isNaN(menor) || menor <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de base menor inválido"; }
+          if(isNaN(altura) || altura <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de altura inválido"; }
 
-          var area = (maior * menor)/2;
+          var area = (maior * menor * altura)/2;
           var result = document.querySelector("#result");
           result.textContent = "Área do objeto é igual a " + area;
         }
@@ -51,15 +53,17 @@
   </head>
   <body>
     <main>
-        <h2 class="center">Calcule a área de Losango</h2>
+        <h2 class="center">Calcule a área de Trapézio</h2>
         <section class="main-content">
-            <img src="exemplo/losango-exemplo.png" alt="imagem de um losango 2d">
+            <img src="exemplo/trapezio-exemplo.png" alt="imagem de um trapézio 2d">
             <div>
               <p id="mensage" style="display: none;"></p>
-              <label>Diagonal Maior:</label>
-              <input type="text" id="di-menor" name="di-menor">
-              <label>Diagonal Menor:</label>
-              <input type="text" id="di-maior" name="di-maior">
+              <label>Base Maior:</label>
+              <input type="text" id="base-maior" name="base-maior">
+              <label>Base Menor:</label>
+              <input type="text" id="base-menor" name="base-menor">
+              <label>Altura:</label>
+              <input type="text" id="altura" name="altura">
               <input type="submit" onclick="Calcular()" value="Calcular"> 
               <p id="result"></p>
             </div>
