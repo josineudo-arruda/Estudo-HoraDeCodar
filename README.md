@@ -1,7 +1,7 @@
 <h1>Estudo Hora De Codar</h1>
 Exercício com intuito de expor os alunos do curso PROPROFISSÃO ao ambiente de resolução de problemas através de casos reais com o JavaScript. 
 
-## Ecercícios Propostos
+## Exercícios Propostos
 
   1) Escreva um programa que crie uma variável chamada "nome_do_carro" e atribua-a um valor "Fusca". Exiba-a ao usuário.
 
