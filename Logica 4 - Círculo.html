@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Lógica 4 - Área Círculo</title>
+    <style>
+        section.main-content {
+          width: 50vw;
+          display:flex;
+          /*grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));*/
+          gap: 20px;
+          margin: 0 auto;
+        }
+        .center {
+          text-align: center;
+        }
+        section div input {
+          width: 100%;
+        }
+        section div label {
+          text-align: left;
+        }
+        section input[type="submit"], #mensage {
+          margin: 10px 0 0 5px;
+        }
+        img {
+          width: 350px;
+        }
+        #mensage {
+          padding: 10px;
+          background-color: rgb(221, 90, 90);
+          color: rgb(102, 0, 0);
+          border-radius: 5px;
+        }
+    </style>
+    <script>
+        function Calcular() {
+          var mensage = document.querySelector("#mensage");
+          mensage.textContent = "";
+          mensage.style.display = "none";
+
+          var raio = parseFloat(document.getElementById("raio").value);
+
+          if(isNaN(raio) || raio <= 0.0) { mensage.style.display = ""; mensage.textContent = "! Valor de raio inválido"; }
+
+          var area = Math.PI * raio ** 2;
+          var result = document.querySelector("#result");
+          result.textContent = "Área do objeto é igual a " + area;
+        }
+    </script>
+  </head>
+  <body>
+    <main>
+        <h2 class="center">Calcule a área de Círculo</h2>
+        <section class="main-content">
+            <img src="exemplo/circulo-exemplo.png" alt="imagem de um circulo 2d">
+            <div>
+              <p id="mensage" style="display: none;"></p>
+              <label>Raio:</label>
+              <input type="text" id="raio" name="raio">
+              <input type="submit" onclick="Calcular()" value="Calcular"> 
+              <p id="result"></p>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
